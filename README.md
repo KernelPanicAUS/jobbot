@@ -43,8 +43,14 @@ Kick off the bot as a background process, like so:
 
 and keep an eye out for those message :)
 
-The process will log to a file, so you can keep tabs on what its doing if you need to.
+The process will log to a file (log snippet below), so you can keep tabs on what its doing if you need to.
 
+```
+2016-09-22 14:56:33,073 INFO [Spidey] - Begin spider _init_
+2016-09-22 14:56:33,074 INFO [Spidey] - Starting XpatJobsSpider...
+2016-09-22 14:56:34,376 INFO [Spidey] - Found 1 new job ads...
+2016-09-22 14:56:34,377 INFO [Spidey] - Sending message to slack for job => Senior Java Analyst/Developer
+```
 
 ## Requirements
 Groovy v2.3.8 at least
