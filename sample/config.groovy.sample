@@ -1,0 +1,28 @@
+log4j {
+    appender.scrlog = "org.apache.log4j.FileAppender"
+    appender."scrlog.layout"="org.apache.log4j.PatternLayout"
+    appender."scrlog.layout.ConversionPattern"="%d %p [%c] - %m%n"
+    appender."scrlog.file"="script.log"
+
+    rootLogger="debug,scrlog"
+}
+
+jobbot {
+
+    slackUrl = "my.slack.webhook.url"
+
+    db {
+        name = "./jobs.db"
+        url = "jdbc:sqlite:$name"
+        className = "org.sqlite.JDBC"
+    }
+
+    xpatJobs {
+        url = "https://www.xpatjobs.de/search?areas=6&keyword=Java&city=Frankfurt+am+Main&language=English&jobDescriptionLanguage=&job_type=&min_date=&rss=true"
+    }
+
+    startup4me {
+        url = "http://startup4me.com/de/search/Java/feed/rss2/"
+    }
+
+}
